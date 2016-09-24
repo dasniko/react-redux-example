@@ -1,0 +1,48 @@
+{
+  "name": "react-redux-example",
+  "version": "1.0.0",
+  "description": "A small and simple example app, demonstrating how to use react and redux for building webapps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --compilers js:babel-register --recursive",
+    "webpack": "./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack-dev-server --inline --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dasniko/react-redux-example.git"
+  },
+  "keywords": [
+    "javascript",
+    "react",
+    "redux"
+  ],
+  "author": "Niko Köbler <niko@n-k.de> (http://www.n-k.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dasniko/react-redux-example/issues"
+  },
+  "homepage": "https://github.com/dasniko/react-redux-example#readme",
+  "devDependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.14.0",
+    "expect": "^1.20.2",
+    "mocha": "^3.0.2",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.13.0",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0"
+  }
+}
