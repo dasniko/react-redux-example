@@ -1,16 +1,15 @@
-export const ADD_BOOK = 'ADD_BOOK';
-export const DELETE_BOOK = 'DELETE_BOOK';
+import * as types from "./types";
 
 export function addBook(book) {
   return {
-    type: ADD_BOOK,
+    type: types.ADD_BOOK,
     payload: book
   }
 }
 
 export function deleteBook(book) {
   return {
-    type: DELETE_BOOK,
+    type: types.DELETE_BOOK,
     payload: book
   }
 }
