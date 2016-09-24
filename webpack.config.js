@@ -1,5 +1,8 @@
 module.exports = {
   entry: './src/app.js',
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
   output: {
     path: './bin',
     filename: 'app.bundle.js',
@@ -10,10 +13,10 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         loaders: ['babel']
       }
     ]
   }
-}
+};
