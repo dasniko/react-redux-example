@@ -2,14 +2,14 @@ import React from "react";
 import {connect} from "react-redux";
 import BookForm from "./bookForm";
 import BookList from "./bookList";
-import {addBook} from "../actions/books";
+import {addBook, deleteBook} from "../actions/books";
 
 class BookBox extends React.Component {
   render() {
     return (
       <div className="bookBox row">
         <h2>Best Books ever!</h2>
-        <BookList books={this.props.books}/>
+        <BookList books={this.props.books} onBookDelete={this.props.handleBookDelete}/>
         <BookForm onBookSubmit={this.props.handleBookSubmit}/>
       </div>
     );
@@ -30,6 +30,9 @@ const mapDispatchToProps = dispatch => {
   return {
     handleBookSubmit: (book) => {
       dispatch(addBook(book));
+    },
+    handleBookDelete: (book) => {
+      dispatch(deleteBook(book));
     }
   }
 };

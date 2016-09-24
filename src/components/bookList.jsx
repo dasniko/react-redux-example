@@ -3,9 +3,9 @@ import Book from "./book";
 
 export default class BookList extends React.Component {
   render() {
-    let books = this.props.books.map(function (book, index) {
+    let books = this.props.books.map((book, index) => {
       return (
-        <Book author={book.author} title={book.title} key={index}/>
+        <Book book={book} key={index} onBookDelete={this.props.onBookDelete}/>
       );
     });
 
