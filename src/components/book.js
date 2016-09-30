@@ -5,8 +5,8 @@ export default class Book extends React.Component {
     const {book} = this.props;
     return (
       <div className="book">
-        <h4>{book.author}</h4>
         <span className="lead">{book.title}</span>
+        <h3>{book.author}</h3>
         <button className="btn btn-xs btn-danger pull-right" onClick={()=>this.props.onBookDelete(book)}>Delete Book</button>
         <hr/>
       </div>

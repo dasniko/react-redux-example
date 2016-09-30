@@ -8,7 +8,8 @@ class BookBox extends React.Component {
   render() {
     return (
       <div className="bookBox row">
-        <h2>Best Books ever!</h2>
+        <h1>Best Books ever!</h1>
+        <hr/>
         <BookList books={this.props.books} onBookDelete={this.props.handleBookDelete}/>
         <BookForm onBookSubmit={this.props.handleBookSubmit}/>
       </div>

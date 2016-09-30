@@ -22,7 +22,7 @@ export default class BookForm extends React.Component {
     return (
       <div className="col-sm-6">
         <form className="bookForm" onSubmit={this.handleSubmit}>
-          <h4>Add a new book:</h4>
+          <h3>Add a new book:</h3>
           <div className="form-group">
             <label htmlFor="author">Author</label>
             <input type="text" id="author" ref="author" className="form-control" placeholder="Author"/>
