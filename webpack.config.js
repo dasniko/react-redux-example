@@ -10,6 +10,9 @@ module.exports = {
   },
   debug: true,
   devtool: 'inline-source-map',
+  devServer: {
+    historyApiFallback: true
+  },
   module: {
     loaders: [
       {
