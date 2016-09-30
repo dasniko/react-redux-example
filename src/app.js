@@ -5,16 +5,22 @@ import {Provider} from "react-redux";
 import {applyMiddleware, createStore} from "redux";
 import createLogger from "redux-logger";
 import {Router, Route, browserHistory} from "react-router";
+import {syncHistoryWithStore} from "react-router-redux";
 import bookState from "./reducers";
 import BookApp from "./components/bookApp";
 import BookBox from "./components/bookBox";
 import BookDetails from "./components/bookDetails";
 
-let store = createStore(bookState, applyMiddleware(createLogger()));
+const store = createStore(
+  bookState,
+  applyMiddleware(createLogger())
+);
+
+const history = syncHistoryWithStore(browserHistory, store);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={history}>
       <Route component={BookApp}>
         <Route path="/" component={BookBox}/>
         <Route path="books/:bookId" component={BookDetails}/>
